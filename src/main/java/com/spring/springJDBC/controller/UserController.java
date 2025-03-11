@@ -41,4 +41,20 @@ public class UserController {
 		else return "redirect:/message/userInputNo";
 	}
 	
+	@RequestMapping(value = "/userSearch", method = RequestMethod.GET)
+	public String userSearchGet() {
+		
+		return "user/userSearch";
+	}
+	
+	@RequestMapping(value = "/userSearch", method = RequestMethod.POST)
+	public String userSearchPost(Model model, String mid) {
+		UserVo vo = userService.getUserIdSearch(mid);
+		if(vo != null) {
+			model.addAttribute("vo",vo);
+			return "user/userSearchOk";
+		}
+		return "redirect:/message/usercantSearch";
+	}
+	
 }

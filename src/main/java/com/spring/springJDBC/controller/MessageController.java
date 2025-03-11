@@ -29,6 +29,10 @@ public class MessageController {
 			model.addAttribute("message","이미 사용중인 아이디입니다.\\n다른 아이디로 가입하세요.");
 			model.addAttribute("url","user/userInput");
 		}
+		else if(msgFlag.equals("usercantSearch")) {
+			model.addAttribute("message","등록되지 않은 유저입니다. 다시 입력해주세요.");
+			model.addAttribute("url","user/userSearch");
+		}
 		
 		return "include/message";
 		
