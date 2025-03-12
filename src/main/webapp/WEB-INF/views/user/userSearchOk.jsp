@@ -40,8 +40,8 @@
   		<td>${vo.address}</td>
   	</tr>
   	<tr>
-	  			<td colspan="2">
-	  				<input type="button" value="돌아가기" onclick="location.href='userSearch';"class="btn btn-primary me-2"/>
+	  	<td colspan="2">
+	  	<input type="button" value="돌아가기" onclick="location.href='userSearch';"class="btn btn-primary me-2"/>
   	</tr>
   </table>
 </div>
