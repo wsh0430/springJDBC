@@ -19,6 +19,7 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
+	//회원 메인화면 보기
 	@RequestMapping(value = "/userMain", method = RequestMethod.GET)
 	public String userMainGet(Model model) {
 		//전체 인원수 구하기
@@ -27,11 +28,13 @@ public class UserController {
 		return "user/userMain";
 	}
 	
+	//회원등록
 	@RequestMapping(value = "/userInput", method = RequestMethod.GET)
 	public String userInputGet() {
 		return "user/userInput";
 	}
 	
+	//회원등록 폼보기
 	@RequestMapping(value = "/userInput", method = RequestMethod.POST)
 	public String userInputPost(UserVo vo) {
 		//아이디 중복체크
